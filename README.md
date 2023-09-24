@@ -1,4 +1,5 @@
 # Random Design Data Intensive Applications inspired stuff
+![ci results](https://github.com/andrewrlee/ddia/actions/workflows/ci.yml/badge.svg)
 
 Contains a few different random bits and bobs that I wanted to try out whilst reading DDIA (still currently reading).
 
