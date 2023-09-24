@@ -1,0 +1,10 @@
+in
+int
+integer
+interval
+string
+stringer
+stronger
+strong
+stringent
+structure

@@ -1,0 +1,26 @@
+{
+  "name": "ddia",
+  "version": "1.0.0",
+  "description": "ddia",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "generate-random-word-list": "cat /usr/share/dict/words | sort -R | head -n 50 > randwords.txt",
+    "trie:short": "cat src/trie/sampleWords.txt | ts-node --esm src/trie/trie.ts",
+    "trie:long": "cat /usr/share/dict/words | ts-node --esm src/trie/trie.ts",
+    "hash:mem": "ts-node --esm src/hashstore/memory/inMem.run.ts",
+    "hash:file": "ts-node --esm src/hashstore/file/index.ts",
+    "test": "ts-node --esm src/test/runner.ts",
+    "watch-tests": "REPORT_ERROR_STATUS=false nodemon --watch src -e ts,js --exec 'ts-node --esm src/test/runner.ts'"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@tsconfig/node18": "^18.2.2",
+    "@types/node": "^18.17.18",
+    "nodemon": "^3.0.1"
+  }
+}
