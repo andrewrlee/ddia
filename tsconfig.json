@@ -3,8 +3,11 @@
     "compilerOptions": {
       "preserveConstEnums": true,
       "esModuleInterop": true,
-      "module": "NodeNext",
+      "module": "ESNext",
+      "target": "ESNext",
     },
     "include": ["src/**/*"],
-    
+    "ts-node": {
+        "esm": true
+    }
   }

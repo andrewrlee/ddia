@@ -6,12 +6,12 @@
   "type": "module",
   "scripts": {
     "generate-random-word-list": "cat /usr/share/dict/words | sort -R | head -n 50 > randwords.txt",
-    "trie:short": "cat src/trie/sampleWords.txt | ts-node --esm src/trie/trie.ts",
-    "trie:long": "cat /usr/share/dict/words | ts-node --esm src/trie/trie.ts",
-    "hash:mem": "ts-node --esm src/hashstore/memory/inMem.run.ts",
-    "hash:file": "ts-node --esm src/hashstore/file/index.ts",
-    "test": "ts-node --esm src/test/runner.ts",
-    "watch-tests": "REPORT_ERROR_STATUS=false nodemon --watch src -e ts,js --exec 'ts-node --esm src/test/runner.ts'"
+    "trie:short": "cat src/trie/sampleWords.txt | node --no-warnings --loader ts-node/esm src/trie/trie.ts",
+    "trie:long": "cat /usr/share/dict/words | node --no-warnings --loader ts-node/esm src/trie/trie.ts",
+    "hash:mem": "node --no-warnings --loader ts-node/esm src/hashstore/memory/inMem.run.ts",
+    "hash:file": "node --no-warnings --loader ts-node/esm src/hashstore/file/index.ts",
+    "test": "node --no-warnings --loader ts-node/esm  src/test/runner.ts",
+    "watch-tests": "REPORT_ERROR_STATUS=false nodemon --watch src -e ts,js --exec 'npm run test'"
   },
   "author": "",
   "license": "MIT",
